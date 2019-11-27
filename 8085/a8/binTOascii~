@@ -1,0 +1,33 @@
+
+;<binTOascii & asciiTObin>
+lxi sp,1500h
+lxi h,2000h
+lda 2006h
+mov b,a
+call bintoascii
+mov a,b
+rrc
+rrc
+rrc
+rrc
+call bintoascii
+mvi a,39h
+call asciitobin
+
+hlt
+
+bintoascii:	ani 0fh
+		cpi 0ah
+		jc nex
+		adi 07h
+		nex:	adi 30h
+		mov m,a
+		inx h	
+	
+ret
+
+asciitobin:	sbi 30h
+		cpi 0ah
+		rc 
+		sbi 07h 	
+ret
