@@ -1,0 +1,16 @@
+
+;<Program title>
+
+mvi a,00h
+adi 00h
+
+mvi b,0ffh
+inr b
+jnc next
+mvi a,01h
+jmp end
+next: mov a,b
+
+
+end: out 01h
+hlt

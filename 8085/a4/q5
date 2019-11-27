@@ -1,0 +1,9 @@
+
+;<Program title>
+
+mvi a,091h
+ani 0f7h
+
+out 01h
+
+hlt

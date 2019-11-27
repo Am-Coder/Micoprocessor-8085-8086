@@ -1,0 +1,19 @@
+
+;<Program title>
+
+mvi c,69h
+mvi b,42h
+
+mov a,b
+
+cmp c
+jc next
+sub c
+jmp end
+
+next:	mov a,c
+	sub b
+
+ 
+end: out 01h
+hlt
