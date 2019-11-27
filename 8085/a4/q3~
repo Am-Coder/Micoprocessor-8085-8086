@@ -1,0 +1,16 @@
+
+;<Program title>
+
+mvi b,091h
+mvi c,087h
+mov a,b
+ani 01h
+mov b,a
+
+mov a,c
+ani 01h
+mov c,a
+
+out 01h
+
+hlt

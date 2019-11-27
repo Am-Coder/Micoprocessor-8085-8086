@@ -1,0 +1,17 @@
+
+;<Program title>
+
+mvi d,08eh
+mvi e,0f7h
+mov a,d
+ani 0fh
+mov d,a
+
+mov a,e
+ani 0fh
+
+xra d
+
+out 01h
+
+hlt

@@ -1,0 +1,8 @@
+
+;<Program title>
+
+mvi d,0a8h
+ani 00fh
+out 01h
+
+hlt
