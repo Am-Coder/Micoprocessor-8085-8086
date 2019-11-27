@@ -1,0 +1,25 @@
+
+;<Program title>
+lxi h,2100h
+
+mov a,m
+ani 0fh
+rlc
+rlc
+rlc
+rlc
+mov b,a
+
+mov a,m
+ani 0f0h
+rrc
+rrc
+rrc
+rrc
+mov c,a
+
+add b
+inx h
+mov m,a
+
+hlt
