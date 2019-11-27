@@ -1,0 +1,24 @@
+
+;<Program title>
+
+lxi h,2070h
+lxi d,2077h
+
+loop:	mov a,m
+	cpi 0dh
+	jz end
+	
+	cpi 30h
+	jc next
+	
+	cpi 3Ah
+	jnc next
+	
+	stax d	
+	inx d	
+	
+	next: inx h
+
+jmp loop
+
+end: hlt

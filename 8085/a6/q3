@@ -1,0 +1,32 @@
+
+;<Program title>
+
+lxi h,2050h
+lxi d,2077h
+mvi b,15
+
+l1:	dcr b	
+	mov a,m
+
+	stax d
+
+	inx h
+	inx d
+
+
+jnz l1
+
+lxi h,2077h
+lxi d,2055h
+mvi b,15
+loop1:	mov a,m
+	stax d
+
+	inx h
+	inx d
+
+	dcr b
+jnz loop1
+
+
+end: hlt
