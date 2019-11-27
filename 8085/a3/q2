@@ -1,0 +1,21 @@
+
+;<Program title>
+
+mvi c,0ffh
+
+mov a,c
+adi 00h
+
+rar
+adi 00h
+
+rar
+adi 00h
+
+rar
+adi 00h
+
+rar
+adi 00h
+
+hlt

@@ -1,0 +1,18 @@
+
+;<Program title>
+
+mvi c,0ffh
+
+mov a,c
+adi 00h
+
+ral
+adi 00h
+
+ral
+adi 00h
+
+ral
+adi 00h
+
+hlt
