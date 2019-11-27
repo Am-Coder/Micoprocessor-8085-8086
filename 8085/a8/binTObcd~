@@ -1,0 +1,20 @@
+
+;<bintobcd>
+
+lxi h,2000h
+lda 2006h
+mvi b,64h
+call bintobcd
+mvi b,0ah
+call bintobcd
+mov m,a
+hlt
+
+
+bintobcd:	mvi m,0ffh
+	loop:	inr m
+		sub b
+		jnc loop
+	add b
+	inx h
+ret

@@ -1,0 +1,33 @@
+
+;<bcd to bin>
+
+
+
+;data
+lxi sp,2400h
+lda 2000h
+call bcdtobin
+hlt
+
+;code
+bcdtobin:	mov b,a
+	rrc
+	rrc
+	rrc
+	rrc
+	ani 0fh
+	jz bcd1
+	mov c,a
+	xra a
+	mvi d,0ah
+	l1:	add c
+		dcr d
+	jnz l1
+
+
+	bcd1:	mov d,a
+		mov a,b
+		ani 0fh
+		add d
+	sta 2001h
+ret
