@@ -1,0 +1,22 @@
+
+;mul 8 bit
+
+lxi b,0050h
+lxi d,0004h
+
+
+call multi
+
+
+
+hlt
+
+
+multi:	lxi h,0000h
+	l1:	dad b											
+		dcx d
+		mov a,e
+		xra d										
+	jnz l1	
+	
+ret

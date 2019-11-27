@@ -1,0 +1,15 @@
+
+;<Program title>
+
+lxi h,2000h
+xra a
+adi 00h
+mvi e,5
+
+l1:	add m
+
+	inx h
+	dcr e
+jnz l1
+
+hlt
