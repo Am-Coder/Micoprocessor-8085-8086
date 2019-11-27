@@ -1,0 +1,36 @@
+
+;Fibonaci
+mvi b,1
+mvi c,1
+mvi a,3
+lxi h,2400h
+
+call fib
+
+hlt
+
+fib:	mov m,b
+	inx h
+	dcr a
+	
+	cpi 01h
+	rc
+	mov m,c
+	inx h
+	dcr a
+	
+	cpi 00h
+	rz
+	
+	mov d,a
+	loop: 	mov a,c
+		add b
+		mov m,a
+		mov b,c
+		mov c,a
+
+		inx h
+		dcr d
+		jnz loop
+		
+ret 
