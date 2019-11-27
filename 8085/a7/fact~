@@ -1,0 +1,29 @@
+
+
+xra A
+mvi A,04h
+mvi H,05h
+
+
+call fact
+
+mov A,H
+ 
+out 0Ah
+hlt
+
+fact:	cpi 01h
+	rz
+	dcr A
+	mov B,A
+	mov C,B
+	mov A,H
+	mov L,H
+        loop:	add L
+		dcr C
+	jnz loop	
+	mov H,A
+	mov A,B
+	call fact	
+ret
+
